@@ -7,18 +7,42 @@
     <tr>
         <td>
             <form>
-                Num1: <input type="number" [(ngModel)]="num1" name="num1"> &nbsp;
+                Num1: <input type="number" [(ngModel)]="num1" name="num1">
                 <br/><br/>
                 Num2: <input type="number" [(ngModel)]="num2" name="num2"><br/><br/>
-                <input class="calcbtn" type="submit" value="+" (click)="sum()">&nbsp;
-                <input class="calcbtn" type="submit" value="-" (click)="sub()">&nbsp;
-                <input class="calcbtn" type="submit" value="/" (click)="div()">&nbsp;
-                <input class="calcbtn" type="submit" value="x" (click)="mul()">&nbsp;
-                <input class="calcbtn" type="submit" value="√" (click)="sqrt()">&nbsp;
-                <input class="calcbtn" type="submit" value="^" (click)="pow()">&nbsp;
-                <br/>
-                <br/>
-                <p>{{textResult}}{{result}}</p>
+                <table>
+                    <tr>
+                        <td>
+                            <input class="calcbtn" type="submit" value="+" (click)="sum()">
+                        </td>
+                        <td>
+                            <input class="calcbtn" type="submit" value="-" (click)="sub()">
+                        </td>
+                        <td>
+                            <input class="calcbtn" type="submit" value="/" (click)="div()">
+                        </td>
+                        <td>
+                            <input class="calcbtn" type="submit" value="x" (click)="mul()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="calcbtn" type="submit" value="√" (click)="sqrt()">
+                        </td>
+                        <td>
+                            <input class="calcbtn" type="submit" value="^" (click)="pow()">
+                        </td>
+                        <td>
+                            <input class="calcbtn" type="submit" value="log" (click)="log()">
+                        </td>
+                        <td>
+                            <input class="calcbtn" type="submit" value="n!" (click)="fact()">
+                        </td>
+                    </tr>
+                </table>
+                <p><span [innerHTML]="textResult"></span><br/><br/>
+                    <span id="result">{{result}}</span>
+                </p>
             </form>
         </td>
     </tr>

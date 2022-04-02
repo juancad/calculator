@@ -22,3 +22,10 @@ input.calcbtn {
 input.calcbtn:hover {
     background: black;
 }
+
+span#result {
+    background: #101010;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+}
