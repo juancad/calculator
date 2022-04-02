@@ -1,18 +1,21 @@
 # Calculadora
 
 ## Contenidos 
+1. [Link web](#link-web)
+2. [Visualización](#visualizacion)
+3. [Descripción del trabajo realizado](#descripcion)
 
-## Link web
+## 1. Link web <a name="link-web"/>
 https://juancad.github.io/calculator/
 
-## Visualización
+## 2. Visualización <a name="visualizacion"/>
 
 Se trata de una simple calculadora que permite sumar, restar, dividir y multiplicar dos números.
 Adicionalmente, permitirá calcular la raíz cuadrada del primer número, la potencia del primer número como base y segundo como exponente, el logaritmo del primer número con base el segundo número o el factorial del primer número.
 
 ![Sin título-1](https://user-images.githubusercontent.com/91132611/161382008-51a9903e-07e2-42ff-bf5e-d48207e01301.png)
 
-## Descripción del trabajo realizado
+## 3. Descripción del trabajo realizado <a name="descripcion"/>
 
 En el archivo `app.component.ts` se ha creado la componente de la calculadora. Se trata de una clase con los atributos title, num1, num2, textResult y result.
 - title guardará el título de la aplicación
