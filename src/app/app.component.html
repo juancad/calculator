@@ -1,16 +1,25 @@
-<h1>{{title}}</h1>
-
-<form>
-Num1: <input type="number" [(ngModel)]="num1" name="num1"> &nbsp;
-<br/><br/>
-Num2: <input type="number" [(ngModel)]="num2" name="num2"><br/><br/>
-<input type="submit" value="+" (click)="sum()">&nbsp;
-<input type="submit" value="-" (click)="sub()">&nbsp;
-<input type="submit" value="/" (click)="div()">&nbsp;
-<input type="submit" value="x" (click)="mul()">&nbsp;
-<input type="submit" value="√" (click)="sqrt()">&nbsp;
-<input type="submit" value="^" (click)="pow()">&nbsp;
-<br/>
-<br/>
-<p>{{textResult}}{{result}}</p>
-</form>
+<table id="calc">
+    <tr>
+        <td>
+            <h1>{{title}}</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form>
+                Num1: <input type="number" [(ngModel)]="num1" name="num1"> &nbsp;
+                <br/><br/>
+                Num2: <input type="number" [(ngModel)]="num2" name="num2"><br/><br/>
+                <input class="calcbtn" type="submit" value="+" (click)="sum()">&nbsp;
+                <input class="calcbtn" type="submit" value="-" (click)="sub()">&nbsp;
+                <input class="calcbtn" type="submit" value="/" (click)="div()">&nbsp;
+                <input class="calcbtn" type="submit" value="x" (click)="mul()">&nbsp;
+                <input class="calcbtn" type="submit" value="√" (click)="sqrt()">&nbsp;
+                <input class="calcbtn" type="submit" value="^" (click)="pow()">&nbsp;
+                <br/>
+                <br/>
+                <p>{{textResult}}{{result}}</p>
+            </form>
+        </td>
+    </tr>
+</table>
