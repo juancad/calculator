@@ -1,27 +1,39 @@
-# Calculator
+# Calculadora
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+## Contenidos 
+1. [Link web](#link-web)
+2. [Visualización](#visualizacion)
+3. [Descripción del trabajo realizado](#descripcion)
 
-## Development server
+## 1. Link web <a name="link-web"/>
+https://juancad.github.io/calculator/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 2. Visualización <a name="visualizacion"/>
 
-## Code scaffolding
+Se trata de una simple calculadora que permite sumar, restar, dividir y multiplicar dos números.
+Adicionalmente, permitirá calcular la raíz cuadrada del primer número, la potencia del primer número como base y segundo como exponente, el logaritmo del primer número con base el segundo número o el factorial del primer número.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Sin título-1](https://user-images.githubusercontent.com/91132611/161382008-51a9903e-07e2-42ff-bf5e-d48207e01301.png)
 
-## Build
+## 3. Descripción del trabajo realizado <a name="descripcion"/>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+En el archivo `app.component.ts` se ha creado la componente de la calculadora. Se trata de una clase con los atributos title, num1, num2, textResult y result.
+- title guardará el título de la aplicación
+- num1 guardará el primer número de la calculadora
+- num2 guardará el segundo número de la calculadora
+- textResult guadará el texto a mostrar en función de la operación realizada
+- result guardará el resultado de la operación
 
-## Running unit tests
+La clase tiene distintas funciones, una por cada operación de la calculadora. Las funciones creadas son las siguientes:
+- La función sum() suma num1 y num2 y lo guarda en result.
+- La función sub() resta num1 y num2 y lo guarda en result.
+- La función mul() multiplica num1 y num2 y lo guarda en result.
+- La función div() divide num1 y num2 y lo guarda en result.
+- La función sqrt() calcula la raíz cuadrada del num1 y lo guarda en result.
+- La función pow() calcula la potencia del num1 elevado al num2 y lo guarda en result.
+- La función log() calcula el logaritmo en base al num2 del num1 y lo guarda en result.
+- La función fact() calcula el factorial del num1. Esta función llama a otra llamada factorial(x), que permite calcular el factorial del número que se le pasa por parámetro.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+El archivo `app.component.html` contiene el html de la aplicación. En él se muestra el título guardado en el `app.component.ts` y se muestra un formulario donde se pueden establecer los valores de num1 y num2. En este formulario se muestra también un botón por cada operación a realizar, que llamará a las funciones que se han creado en la clase de la componente. Finalmente se muestra el valor del resultado.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+El archivo `app.component.css` se establece mediante css el diseño visual de la aplicación. 
