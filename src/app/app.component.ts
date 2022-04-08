@@ -69,7 +69,7 @@ export class AppComponent {
     }
   }
 
-  changeOperator(op: string): void {
+  setOperator(op: string): void {
     this.isNum1 = false;
     this.operator = op;
     this.changeOutput();
