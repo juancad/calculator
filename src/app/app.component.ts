@@ -15,6 +15,7 @@ export class AppComponent {
   isNum1=true;
   operator="";
 
+  //pone los valores de la calculadora a los valores por defecto
   reset():void {
     this.num1="";
     this.num2="";
@@ -24,6 +25,7 @@ export class AppComponent {
     this.operator="";
   }
 
+  //calcula el resultado de la operación
   solve():void {
     switch(this.operator) {
       case "+":
@@ -52,9 +54,16 @@ export class AppComponent {
         this.num2 = "";
       break;
       case "log":
-        this.result=((Math.log(Number(this.num1))/Math.log(Number(this.num2))));
-        this.num1 = String(this.result);
-        this.num2 = "";
+        if(this.num2=="") {
+          this.result=((Math.log(Number(this.num1))/Math.log(10)));
+          this.num1 = String(this.result);
+          this.num2 = "";
+        }
+        else {
+          this.result=((Math.log(Number(this.num1))/Math.log(Number(this.num2))));
+          this.num1 = String(this.result);
+          this.num2 = "";;
+      }
       break;
       case "^":
         this.result=((Math.pow(Number(this.num1), Number(this.num2))));
@@ -69,12 +78,14 @@ export class AppComponent {
     }
   }
 
+  //cambia el valor del operator
   setOperator(op: string): void {
     this.isNum1 = false;
     this.operator = op;
     this.changeOutput();
   }
 
+  //cambia el valor de num1 o de num2, añadiendo el valor del botón numérico pulsado
   number(x: number):void {
     if(this.isNum1) {
       this.num1+=x;
@@ -86,6 +97,7 @@ export class AppComponent {
     }
   }
 
+  //actualiza el valor del output
   changeOutput(): void {
     if(this.isNum1) {
       this.output = this.num1;
@@ -112,6 +124,7 @@ export class AppComponent {
     }
   }
 
+  //calcula el factorial del número x
   factorial(x: number): number {
     if(x==0)
       return 1;
