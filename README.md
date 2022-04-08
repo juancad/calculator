@@ -13,7 +13,7 @@ https://juancad.github.io/calculator/
 Se trata de una simple calculadora que permite sumar, restar, dividir y multiplicar dos números.
 Adicionalmente, permitirá calcular la raíz cuadrada del primer número, la potencia del primer número como base y segundo como exponente, el logaritmo del primer número con base el segundo número o el factorial del primer número.
 
-![calcladora](https://user-images.githubusercontent.com/91132611/162523903-fd1d4520-98a1-40a2-af0f-1b0a832fa35a.png)
+![calculadora](https://user-images.githubusercontent.com/91132611/162525371-bfe630ef-b5f1-4849-8a03-7b8cb928f495.png)
 
 ## 3. Descripción del trabajo realizado <a name="descripcion"/>
 
