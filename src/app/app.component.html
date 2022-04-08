@@ -7,40 +7,80 @@
     <tr>
         <td>
             <form>
-                Num1: <input type="number" [(ngModel)]="num1" name="num1">
-                <br/><br/>
-                Num2: <input type="number" [(ngModel)]="num2" name="num2"><br/><br/>
+                <span [innerHTML]="output" id="output"></span>
+                <br/>
                 <table style="margin: auto">
                     <tr>
                         <td>
-                            <input class="calcbtn" type="submit" value="+" (click)="sum()">
+                            <input class="calcbtn" type="submit" value="√" (click)="changeOperator('√')">
                         </td>
                         <td>
-                            <input class="calcbtn" type="submit" value="-" (click)="sub()">
+                            <input class="calcbtn" type="submit" value="^" (click)="changeOperator('^')">
                         </td>
                         <td>
-                            <input class="calcbtn" type="submit" value="/" (click)="div()">
+                            <input class="calcbtn" type="submit" value="log" (click)="changeOperator('log')">
                         </td>
                         <td>
-                            <input class="calcbtn" type="submit" value="x" (click)="mul()">
+                            <input class="calcbtn" type="submit" value="n!" (click)="changeOperator('!')">
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td>
+                            <input class="calcnum" type="submit" value="7" (click)="number(7)">
+                        </td>
+                        <td>
+                            <input class="calcnum" type="submit" value="8" (click)="number(8)">
+                        </td>
+                        <td>
+                            <input class="calcnum" type="submit" value="9" (click)="number(9)">
+                        </td>
+                        <td>
+                            <input class="calcbtn" type="submit" value="*" (click)="changeOperator('*')">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input class="calcbtn" type="submit" value="√" (click)="sqrt()">
+                            <input class="calcnum" type="submit" value="4" (click)="number(4)">
                         </td>
                         <td>
-                            <input class="calcbtn" type="submit" value="^" (click)="pow()">
+                            <input class="calcnum" type="submit" value="5" (click)="number(5)">
                         </td>
                         <td>
-                            <input class="calcbtn" type="submit" value="log" (click)="log()">
+                            <input class="calcnum" type="submit" value="6" (click)="number(6)">
                         </td>
                         <td>
-                            <input class="calcbtn" type="submit" value="n!" (click)="fact()">
+                            <input class="calcbtn" type="submit" value="-" (click)="changeOperator('-')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="calcnum" type="submit" value="1" (click)="number(1)">
+                        </td>
+                        <td>
+                            <input class="calcnum" type="submit" value="2" (click)="number(2)">
+                        </td>
+                        <td>
+                            <input class="calcnum" type="submit" value="3" (click)="number(3)">
+                        </td>
+                        <td>
+                            <input class="calcbtn" type="submit" value="+" (click)="changeOperator('+')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <input class="calcnum" type="submit" value="0" (click)="number(0)">
+                        </td>
+                        <td>
+                            <input class="calcnum" type="submit" value="C" (click)="reset()">
+                        </td>
+                        <td>
+                            <input class="calcbtn" type="submit" value="=" (click)="solve()">
                         </td>
                     </tr>
                 </table>
-                <p><span [innerHTML]="textResult"></span><br/><br/>
+                <p>
                     <span id="result">{{result}}</span>
                 </p>
             </form>

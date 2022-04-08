@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,42 +8,108 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Calculadora';
-  num1=0;
-  num2=0;
-  textResult="";
+  num1="";
+  num2="";
+  output="0";
   result=0;
+  isNum1=true;
+  operator="";
 
-  sum():void{
-    this.textResult=((this.num1+" + "+this.num2+" = "));
-    this.result=((this.num1+this.num2));
+  reset():void {
+    this.num1="";
+    this.num2="";
+    this.output="0";
+    this.result=0;
+    this.isNum1=true;
+    this.operator="";
   }
-  sub():void{
-    this.textResult=((this.num1+" - "+this.num2+" = "));
-    this.result=((this.num1-this.num2));
+
+  solve():void {
+    switch(this.operator) {
+      case "+":
+        this.result = Number(this.num1)+Number(this.num2);
+        this.num1 = String(this.result);
+        this.num2 = "";
+      break;
+      case "-":
+        this.result = Number(this.num1)-Number(this.num2);
+        this.num1 = String(this.result);
+        this.num2 = "";
+      break;
+      case "*": 
+        this.result = Number(this.num1)*Number(this.num2);
+        this.num1 = String(this.result);
+        this.num2 = "";
+      break;
+      case "/":         
+        this.result = Number(this.num1)/Number(this.num2);
+        this.num1 = String(this.result);
+        this.num2 = "";
+      break;
+      case "!":
+        this.result = this.factorial(Number(this.num1));
+        this.num1 = String(this.result);
+        this.num2 = "";
+      break;
+      case "log":
+        this.result=((Math.log(Number(this.num1))/Math.log(Number(this.num2))));
+        this.num1 = String(this.result);
+        this.num2 = "";
+      break;
+      case "^":
+        this.result=((Math.pow(Number(this.num1), Number(this.num2))));
+        this.num1 = String(this.result);
+        this.num2 = "";
+      break;
+      case "√":
+        this.result=((Math.sqrt(Number(this.num1))));
+        this.num1 = String(this.result);
+        this.num2 = "";
+      break;
+    }
   }
-  mul():void{
-    this.textResult=((this.num1+" x "+this.num2+" = "));
-    this.result=((this.num1*this.num2));
+
+  changeOperator(op: string): void {
+    this.isNum1 = false;
+    this.operator = op;
+    this.changeOutput();
   }
-  div():void{
-    this.textResult=((this.num1+" / "+this.num2+" = "));
-    this.result=((this.num1/this.num2));
+
+  number(x: number):void {
+    if(this.isNum1) {
+      this.num1+=x;
+      this.changeOutput();
+    }
+    else {
+      this.num2+=x;
+      this.changeOutput();
+    }
   }
-  sqrt():void{
-    this.textResult=(("√"+this.num1+" = "));
-    this.result=((Math.sqrt(this.num1)));
-  }
-  pow():void{
-    this.textResult=((this.num1+"<sup>"+this.num2+"</sup>= "));
-    this.result=((Math.pow(this.num1, this.num2)));
-  }
-  log():void{
-    this.textResult=(("log<sub>"+this.num2+"</sub>"+this.num1+"= "));
-    this.result=((Math.log(this.num1)/Math.log(this.num2)));
-  }
-  fact():void{
-    this.textResult=((this.num1+"!"+"= "));
-    this.result=((this.factorial(this.num1)));
+
+  changeOutput(): void {
+    if(this.isNum1) {
+      this.output = this.num1;
+    }
+    else {
+      switch(this.operator) {
+        case "+": this.output = this.num1+"+"+this.num2;
+        break;
+        case "-": this.output = this.num1+"-"+this.num2;
+        break;
+        case "*": this.output = this.num1+"*"+this.num2;
+        break;
+        case "/": this.output = this.num1+"/";
+        break;
+        case "!": this.output = this.num1+"!";
+        break;
+        case "log": this.output = "log <sub>"+this.num2+"</sub> ("+this.num1+")";
+        break;
+        case "^": this.output = this.num1+"<sup>"+this.num2+"</sup>";
+        break;
+        case "√": this.output = "√"+this.num1;
+        break;
+      }
+    }
   }
 
   factorial(x: number): number {
