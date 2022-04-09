@@ -97,6 +97,7 @@ export class AppComponent {
     }
   }
 
+  //pone un punto en el número
   point():void {
     if(this.isNum1) {
       this.num1+=".";
@@ -121,7 +122,7 @@ export class AppComponent {
         break;
         case "*": this.output = this.num1+"*"+this.num2;
         break;
-        case "/": this.output = this.num1+"/";
+        case "/": this.output = this.num1+"/"+this.num2;
         break;
         case "!": this.output = this.num1+"!";
         break;
