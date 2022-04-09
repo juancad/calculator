@@ -13,7 +13,7 @@ https://juancad.github.io/calculator/
 Se trata de una simple calculadora que permite sumar, restar, dividir y multiplicar dos números.
 Adicionalmente, permitirá calcular la raíz cuadrada del primer número, la potencia del primer número como base y segundo como exponente, el logaritmo del primer número con base el segundo número o el factorial del primer número.
 
-![calculadora](https://user-images.githubusercontent.com/91132611/162525371-bfe630ef-b5f1-4849-8a03-7b8cb928f495.png)
+![calculadora](https://user-images.githubusercontent.com/91132611/162551697-6e763d36-58c1-486c-90f3-5e13f1977bdf.png)
 
 ## 3. Descripción del trabajo realizado <a name="descripcion"/>
 
@@ -31,6 +31,7 @@ La clase tiene distintas funciones, que son las siguientes:
 - La función solve() calcula el resultado en función de la operación a realizar y los valores de num1 y num2. Guarda el resultado en la variable result.
 - La función setOperator(op: string) recibe una cadena de caracteres con la operación a realizar y cambia el valor de la variable operator.
 - La función number(x: number) recibe un número y lo concatena a num1 o num2 (en función del valor de la variable isNum1). Es llamada cuando se presiona una tecla numérica de la calculadora.
+- La función point() añade un punto al número.
 - La función changeOutput() se encarga de actualizar lo que se muestra en la pantalla de la calculadora, es decir, el valor del output. Cada vez que una tecla de la calculadora es pulsada, se llama a esta función, para mostrar lo que se ha pulsado.
 - La función factorial(x: number) me permite calcular el factorial del número que se ha pasado. Es utilizada cuando el operador es el factorial.
 
