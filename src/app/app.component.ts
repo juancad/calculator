@@ -97,6 +97,17 @@ export class AppComponent {
     }
   }
 
+  point():void {
+    if(this.isNum1) {
+      this.num1+=".";
+      this.changeOutput();
+    }
+    else {
+      this.num2+=".";
+      this.changeOutput();
+    }
+  }
+
   //actualiza el valor del output
   changeOutput(): void {
     if(this.isNum1) {

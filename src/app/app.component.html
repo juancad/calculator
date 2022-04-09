@@ -35,7 +35,7 @@
                             <input class="calcnum" type="submit" value="9" (click)="number(9)">
                         </td>
                         <td>
-                            <input class="calcbtn" type="submit" value="*" (click)="setOperator('*')">
+                            <input class="calcbtn" type="submit" value="/" (click)="setOperator('/')">
                         </td>
                     </tr>
                     <tr>
@@ -49,7 +49,7 @@
                             <input class="calcnum" type="submit" value="6" (click)="number(6)">
                         </td>
                         <td>
-                            <input class="calcbtn" type="submit" value="-" (click)="setOperator('-')">
+                            <input class="calcbtn" type="submit" value="*" (click)="setOperator('*')">
                         </td>
                     </tr>
                     <tr>
@@ -63,20 +63,28 @@
                             <input class="calcnum" type="submit" value="3" (click)="number(3)">
                         </td>
                         <td>
-                            <input class="calcbtn" type="submit" value="+" (click)="setOperator('+')">
+                            <input class="calcbtn" type="submit" value="-" (click)="setOperator('-')">
                         </td>
                     </tr>
                     <tr>
                         <td>
+                            <input class="calcreset" type="submit" value="C" (click)="reset()">
                         </td>
                         <td>
                             <input class="calcnum" type="submit" value="0" (click)="number(0)">
                         </td>
                         <td>
-                            <input class="calcnum" type="submit" value="C" (click)="reset()">
+                            <input class="calcnum" type="submit" value="." (click)="point()">
                         </td>
                         <td>
-                            <input class="calcbtn" type="submit" value="=" (click)="solve()">
+                            <input class="calcbtn" type="submit" value="+" (click)="setOperator('+')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2">
+                            <input class="calcsolve" type="submit" value="=" (click)="solve()">      
                         </td>
                     </tr>
                 </table>
