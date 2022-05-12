@@ -2,13 +2,22 @@
 
 ## Contenidos 
 1. [Link web](#link-web)
-2. [Visualización](#visualizacion)
-3. [Descripción del trabajo realizado](#descripcion)
+2. [Requisitos](#requisitos)
+3. [Visualización](#visualizacion)
+4. [Descripción del trabajo realizado](#descripcion)
 
 ## 1. Link web <a name="link-web"/>
 https://juancad.github.io/calculator/
 
-## 2. Visualización <a name="visualizacion"/>
+## 2. Requisitos<a name="requisitos"/>
+Para poder ejecutar el proyecto será necesario:
+- Tener instalado [Node.js](https://nodejs.org/es/download/).
+- Para este proyecto se ha utilizado el IDE Visual Studio.
+- Tener instalado npm, mediante el comando: `npm install -g @angular/cli`.
+- Importar el proyecto e instalar las dependencias del fichero package.json mediante el comando `npm install`.
+- Ejecutar el comando `ng serve` y abrir la dirección `http://localhost:4200/` en un navegador.
+
+## 3. Visualización <a name="visualizacion"/>
 
 Se trata de una simple calculadora que permite sumar, restar, dividir y multiplicar dos números.
 Adicionalmente, permitirá calcular la raíz cuadrada del primer número, la potencia del primer número como base y segundo como exponente, el logaritmo del primer número con base el segundo número o el factorial del primer número.
